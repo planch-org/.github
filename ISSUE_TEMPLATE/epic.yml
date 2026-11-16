@@ -1,0 +1,43 @@
+name: Epic
+description: Plan a feature that spans several repos.
+title: "[Epic] "
+labels: ["epic"]
+body:
+  - type: input
+    id: request-link
+    attributes:
+      label: Link to the customer request
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and evidence
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Behavior spec
+      placeholder: When [setting] is [value] in Dashboard, Business shows [result]
+  - type: checkboxes
+    id: areas
+    attributes:
+      label: Affected areas
+      options:
+        - label: API
+        - label: Dashboard web
+        - label: Dashboard iOS
+        - label: Dashboard Android
+        - label: Business web
+        - label: CRM
+        - label: Promo
+  - type: textarea
+    id: release-order
+    attributes:
+      label: Release order
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: End-to-end acceptance criteria
+  - type: input
+    id: owner
+    attributes:
+      label: Feature owner
+      placeholder: "@github-handle"
