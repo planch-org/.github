@@ -1,0 +1,45 @@
+name: Request
+description: A request for a new capability or change, from a customer or from inside Planch. Use a Task instead if the work is already decided.
+title: "[Request] "
+type: Request
+body:
+  - type: textarea
+    id: request
+    attributes:
+      label: Request
+      description: In the requester's own words. Quote them if you can.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it matters
+    validations:
+      required: true
+  - type: dropdown
+    id: source
+    attributes:
+      label: Source
+      options:
+        - Dashboard support
+        - Business support
+        - Product owner
+        - Marketing
+        - Sales
+        - Internal other
+  - type: input
+    id: requester
+    attributes:
+      label: Customer or requester
+  - type: dropdown
+    id: count
+    attributes:
+      label: How many people asked
+      options:
+        - "1"
+        - "2-5"
+        - "6+"
+  - type: input
+    id: conversation
+    attributes:
+      label: Link to the conversation or doc

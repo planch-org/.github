@@ -6,7 +6,7 @@ body:
   - type: input
     id: request-link
     attributes:
-      label: Link to the customer request
+      label: Link to the request
   - type: textarea
     id: problem
     attributes:
