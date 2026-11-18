@@ -1,5 +1,5 @@
 name: API request
-description: Ask the API owner for a change needed by a customer request.
+description: Ask the API owner for a change needed by a request.
 title: "[API request] "
 body:
   - type: markdown
@@ -11,7 +11,7 @@ body:
   - type: input
     id: request-link
     attributes:
-      label: Link to the customer request
+      label: Link to the request
     validations:
       required: true
   - type: textarea
