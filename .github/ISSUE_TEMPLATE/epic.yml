@@ -1,5 +1,5 @@
 name: Epic
-description: Plan a feature that spans several repos.
+description: Plan a feature that spans several repos. Open it in planch-org/product-hub after triage.
 title: "[Epic] "
 labels: ["epic"]
 body:
@@ -7,6 +7,22 @@ body:
     id: request-link
     attributes:
       label: Link to the request
+  - type: input
+    id: triage-link
+    attributes:
+      label: Triage comment
+      description: Link to the impact report posted as a comment on the request.
+  - type: input
+    id: design-link
+    attributes:
+      label: Design task
+      description: Link to the Design issue, if triage said a mockup is needed.
+  - type: input
+    id: feature-folder
+    attributes:
+      label: Feature folder
+      description: Folder in planch-org/product-hub that holds the brief, design notes, and specs.
+      placeholder: features/YYYY-MM-name/
   - type: textarea
     id: problem
     attributes:
@@ -19,19 +35,21 @@ body:
   - type: checkboxes
     id: areas
     attributes:
-      label: Affected areas
+      label: Affected repos
+      description: Add one sub-issue to this epic in each repo you check.
       options:
-        - label: API
-        - label: Dashboard web
-        - label: Dashboard iOS
-        - label: Dashboard Android
-        - label: Business web
-        - label: CRM
-        - label: Promo
+        - label: api
+        - label: dashboard-web
+        - label: dashboard-ios
+        - label: dashboard-android
+        - label: business-web
+        - label: crm
+        - label: promo-web
   - type: textarea
     id: release-order
     attributes:
       label: Release order
+      placeholder: "1. api  2. dashboard-web  3. business-web"
   - type: textarea
     id: acceptance
     attributes:
