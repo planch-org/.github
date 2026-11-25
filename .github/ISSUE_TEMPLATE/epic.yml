@@ -1,7 +1,7 @@
 name: Epic
 description: Plan a feature that spans several repos. Open it in planch-org/product-hub after triage.
 title: "[Epic] "
-labels: ["epic"]
+type: Epic
 body:
   - type: input
     id: request-link

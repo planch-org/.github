@@ -1,6 +1,7 @@
 name: Design
 description: A mockup task for an epic. Open it in planch-org/product-hub and attach it to the epic as a sub-issue.
 title: "[Design] "
+type: Design
 labels: ["ready-for-human"]
 body:
   - type: markdown
