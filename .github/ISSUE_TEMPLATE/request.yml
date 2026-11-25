@@ -2,6 +2,7 @@ name: Request
 description: A request for a new capability or change, from a customer or from inside Planch. Use a Task instead if the work is already decided.
 title: "[Request] "
 type: Request
+labels: ["needs-triage"]
 body:
   - type: textarea
     id: request

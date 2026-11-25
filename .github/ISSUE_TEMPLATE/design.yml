@@ -1,0 +1,62 @@
+name: Design
+description: A mockup task for an epic. Open it in planch-org/product-hub and attach it to the epic as a sub-issue.
+title: "[Design] "
+type: Design
+labels: ["ready-for-human"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Open this only when triage said a mockup is needed. Attach it to the
+        epic as a sub-issue. It blocks the UI tickets in `dashboard-*` and
+        `business-web`, not the `api` tickets.
+
+        Make the mockups with Claude Design / Artifacts and link them from the
+        feature's `features/<feature>/02-design-notes.md`.
+  - type: input
+    id: epic-link
+    attributes:
+      label: Epic
+      description: Link to the epic this design task belongs to.
+    validations:
+      required: true
+  - type: input
+    id: request-link
+    attributes:
+      label: Customer request
+      description: Link to the request the epic came from.
+  - type: textarea
+    id: scope
+    attributes:
+      label: What to design
+      description: The screens or flows to design, and in which products.
+      placeholder: |
+        Dashboard: settings screen for X
+        Business: how X shows on the booking page
+    validations:
+      required: true
+  - type: checkboxes
+    id: products
+    attributes:
+      label: Products
+      options:
+        - label: Dashboard
+        - label: Business
+  - type: checkboxes
+    id: platforms
+    attributes:
+      label: Platforms
+      options:
+        - label: Web
+        - label: iOS
+        - label: Android
+  - type: textarea
+    id: spec
+    attributes:
+      label: Behavior spec or acceptance notes
+      description: Link to the behavior spec in the epic or brief, or write the acceptance notes here.
+  - type: input
+    id: mockup-link
+    attributes:
+      label: Mockup
+      description: Link to the Claude Design / Artifact mockup. Fill this in when the design is done.
